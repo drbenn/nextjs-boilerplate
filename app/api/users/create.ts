@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createUser } from '@/app/lib/userService';
+import { createUser } from '@/app/lib/userApiService';
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

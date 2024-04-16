@@ -14,7 +14,7 @@ export default function Page() {
       next: { revalidate: 10 }
     });
     const data = await res.json();
-    console.log(data);
+    console.log(data.users[0]);
     
     // try {
     //   const response = await fetch('./api/users', {
@@ -41,8 +41,6 @@ export default function Page() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            // body: JSON.stringify({ username, email }),
-
             body: JSON.stringify({ username, email }),
 
 

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { createUser, getUsers } from '@/app/lib/userService';
+import { createUser, getUsers } from '@/app/lib/userApiService';
 
 
 export async function GET() {
