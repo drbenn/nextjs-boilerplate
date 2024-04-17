@@ -18,16 +18,10 @@ export const getUsers = async () => {
     try {
       const query = 'SELECT * FROM users';
       const results = await pool.query(query);
-      console.log(results);
-    //   const junk = Object.assign([{}], result[0]);
-    //   console.log('JUNK');
-    //   console.log(junk);
-      
-    const normalizedResults = results.map(item => Object.assign({}, item));
-    console.log(normalizedResults);
-    
+      const normalizedResults = results.map(item => Object.assign({}, item));
       return normalizedResults[0];
-    } catch (error) {
+    } 
+    catch (error) {
       throw error;
     }
   };
@@ -36,7 +30,10 @@ export const getUsers = async () => {
 export const createUser = async (username: string, email: string) => {
   try {
     const query = 'INSERT INTO users (username, email) VALUES (?, ?)';
-    const [result] = await pool.query(query, [username, email]);
+    const result = await pool.query(query, [username, email]);
+    console.log('RESULT--------------');
+    console.log(result);
+    
     return result;
   } catch (error) {
     throw error;

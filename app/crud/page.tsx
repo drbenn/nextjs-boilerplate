@@ -9,26 +9,19 @@ export default function Page() {
   const [message, setMessage] = useState('');
 
   const handleGet = async () => {
-    console.log('in handle get');
-    const res = await fetch('./api/users', {
-      next: { revalidate: 10 }
-    });
-    const data = await res.json();
-    console.log(data.users[0]);
-    
-    // try {
-    //   const response = await fetch('./api/users', {
-    //     method: 'GET',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //   }
-    // })
-    // } catch (error: any) {
-    //   console.log(error);
-    // }
+    try {
+      console.log('in handle get');
+      const res = await fetch('./api/users', {
+        next: { revalidate: 10 }
+      });
+      const data = await res.json();
+      console.log(data.users);
+    } catch (error: any) {
+      console.log(error);
+    }
   }
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handlePost = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();  // Prevent the form from refreshing the page
     setMessage('');  // Clear previous messages
 
@@ -72,7 +65,7 @@ export default function Page() {
 
       <div>
             <h1>Create User</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handlePost}>
                 <label htmlFor="username">Username:</label>
                 <input
                     id="username"

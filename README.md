@@ -1,11 +1,19 @@
 ## Basic Setup
 - https://www.youtube.com/watch?v=gfQCNuTMIGs
 
+## Full Nextjs14 feature walkthrough
+https://www.youtube.com/watch?v=vwSlYG7hFk0
+
 ## Theo modern setup
 - https://www.youtube.com/watch?v=d5x0JCZbAJs
 
 # api Get/Post
 https://www.youtube.com/watch?v=hpI-d39hUWY
+
+## React concepts in 12 min
+https://www.youtube.com/watch?v=wIyHSOugGGw
+
+
 
 1. npm install -D prettier prettier-plugin-tailwindcss
 2. npm i -D autoprefixer

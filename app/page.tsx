@@ -23,14 +23,19 @@ export default async function HomePage() {
   return (
     <main className="">
         <div className="flex flex-wrap gap-4">{
-            // [...mockImages, ...mockImages, ...mockImages].map((image) => (
-            mockImages.map((image) => (
-                <div key={image.id} className="w-48">
-                    <img src={image.url}/>
-                    
+            [...mockImages, ...mockImages, ...mockImages].map((image) => (
+                <div key={image.id * Math.random()} className="w-48">
+                    {/* Must update next.config to allow external image sources */}
+                    <Image
+                        src={image.url}
+                        alt={image.id.toString()}
+                        width="250"
+                        height="250"
+                        layout="responsive"
+                    />
                 </div>
             ))
-        }
+        };
         </div>
     </main>
   );

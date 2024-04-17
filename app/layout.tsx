@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from './providers'
-import Navbar from "./components/navbar";
+import Header from "./components/header";
 import Footer from "./components/footer";
 
 // Nextjs implementation of fonts
@@ -36,10 +36,10 @@ export default function RootLayout({
     //   </body>
     // </html>
     <html lang="en" className={inter.className}>
-      <body className="flex flex-col min-h-screen bg-pink-100">
+      <body className="flex flex-col min-h-screen">
         
-          <Navbar />
-          <main className="flex-grow bg-pink-700">
+          <Header />
+          <main className="flex-grow bg-zinc-100">
             {children}
           </main>
           <Footer />
