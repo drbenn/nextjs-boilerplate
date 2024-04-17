@@ -51,6 +51,9 @@ export default function Header() {
         <Link href="/posts">
           Posts
         </Link>
+        <Link href="/shad">
+          Shadcn
+        </Link>
         <Link href="/sign-in">
           Sign In
         </Link>
