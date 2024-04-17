@@ -13,7 +13,15 @@ https://www.youtube.com/watch?v=hpI-d39hUWY
 ## React concepts in 12 min
 https://www.youtube.com/watch?v=wIyHSOugGGw
 
-
+## Shipfa.st stack
+- Next.js obvi
+- Stripe - webhook & checkout
+- mailgun - DNS records, avoid spam
+- Tailwind - components, animation...ok
+- chakraUI ----> switching to shadcn
+- nextauth - google login, magic link
+- mongodb, supabase ----> weak, mysql FTW
+- seo tags, api calls, customer support
 
 1. npm install -D prettier prettier-plugin-tailwindcss
 2. npm i -D autoprefixer
