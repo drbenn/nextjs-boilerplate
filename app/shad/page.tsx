@@ -28,7 +28,8 @@ export default function Shad() {
     <main className="flex flex-col w-full min-h-screen bg-white">
       Shad
       <section>
-      <Button>
+      <Button className="bg-zinc-900 hover:bg-zinc-600
+        transition text-white rounded py-2 px-3">
         <IoBeerSharp className="mr-2 h-4 w-4" /> Login with Email
       </Button>
       <Input type="email" placeholder="Email" />

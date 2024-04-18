@@ -56,42 +56,45 @@ export default function Page() {
     }
 };
   return (
-    <div className="flex flex-col w-fit bg-sky-500 hover:bg-sky-700">
-      CRUD BUTTONS
-      <Button className="bg-white hover:bg-violet-600" size='sm'>Get</Button>
-      <Button colorScheme='blackAlpha' size='sm'>Get</Button>
-      <Button colorScheme='blackAlpha' size='sm'>Get</Button>
-      <Button colorScheme='blackAlpha' size='sm'>Get</Button>
+    <main  className="w-full text-center flex justify-center items-center">
+      <div className="flex flex-col w-fit h-fit bg-sky-500 hover:bg-sky-700">
+        CRUD BUTTONS
+        <Button className="bg-white hover:bg-violet-600" size='sm'>Get</Button>
+        <Button colorScheme='blackAlpha' size='sm'>Get</Button>
+        <Button colorScheme='blackAlpha' size='sm'>Get</Button>
+        <Button colorScheme='blackAlpha' size='sm'>Get</Button>
 
-      <div>
-            <h1>Create User</h1>
-            <form onSubmit={handlePost}>
-                <label htmlFor="username">Username:</label>
-                <input
-                    id="username"
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                />
-                <br />
-                <label htmlFor="email">Email:</label>
-                <input
-                    id="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <br />
-                <button type="submit">Create User</button>
-            </form>
-            {message && <p>{message}</p>}
-        </div>
+        <div>
+              <h1>Create User</h1>
+              <form onSubmit={handlePost}>
+                  <label htmlFor="username">Username:</label>
+                  <input
+                      id="username"
+                      type="text"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                      required
+                  />
+                  <br />
+                  <label htmlFor="email">Email:</label>
+                  <input
+                      id="email"
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                  />
+                  <br />
+                  <button type="submit">Create User</button>
+              </form>
+              {message && <p>{message}</p>}
+          </div>
 
-        <Button colorScheme='blackAlpha' size='sm' onClick={handleGet}>Get Users from DB</Button>
+          <Button colorScheme='blackAlpha' size='sm' onClick={handleGet}>Get Users from DB</Button>
 
-    </div>
+      </div>
+
+    </main>
 
     
   )

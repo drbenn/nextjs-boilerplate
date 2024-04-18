@@ -36,10 +36,10 @@ export default function RootLayout({
     //   </body>
     // </html>
     <html lang="en" className={inter.className}>
-      <body className="flex flex-col min-h-screen">
+      <body className="flex flex-col min-h-screen bg-rose-100">
         
           <Header />
-          <main className="flex-grow bg-white">
+          <main className="flex flex-grow bg-green-200 w-full">
             {children}
           </main>
           <Footer />

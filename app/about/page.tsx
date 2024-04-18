@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main>
+    <main className="w-full text-center">
         <div>About</div>
     </main>
   )

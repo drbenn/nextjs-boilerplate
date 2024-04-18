@@ -15,8 +15,15 @@ mysql -u root -p$ROOT_PASSWD -e "
     USE $DB; 
     CREATE TABLE posts (
         id INT PRIMARY KEY AUTO_INCREMENT,
+        post VARCHAR(256) NOT NULL,
+        create_date DATETIME DEFAULT CURRENT_TIMESTAMP
+    );"
+
+mysql -u root -p$ROOT_PASSWD -e "
+    USE $DB; 
+    CREATE TABLE users (
+        id INT PRIMARY KEY AUTO_INCREMENT,
         username VARCHAR(75) NOT NULL,
-        post VARCHAR(240) NOT NULL,
         join_date DATETIME DEFAULT CURRENT_TIMESTAMP
     );"
 

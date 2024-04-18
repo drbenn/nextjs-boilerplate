@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <main>
+    <main  className="w-full text-center">
         <div>Contact</div>
     </main>
   )

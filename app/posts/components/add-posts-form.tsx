@@ -1,4 +1,4 @@
-import SubmitBtn from "@/app/components/AddPostForm";
+import SubmitBtn from "@/app/components/add-post-form";
 import { color } from "framer-motion";
 import { revalidatePath } from "next/cache";
 

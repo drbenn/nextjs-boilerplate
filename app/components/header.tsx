@@ -3,6 +3,15 @@
 import { Link } from '@chakra-ui/next-js';
 import { FaBarsStaggered } from "react-icons/fa6";
 
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
 export default function Header() {
   return (
     <header>
@@ -54,12 +63,29 @@ export default function Header() {
         <Link href="/shad">
           Shadcn
         </Link>
+        <Link href="/mysql-crud">
+          MySQL CRUD
+        </Link>
+        <Link href="/mysql-prisma">
+          MySQL Prisma
+        </Link>
         <Link href="/sign-in">
           Sign In
         </Link>
       </div>
-      <div className="flex text-3xl text-white sm:hidden"> 
-          <FaBarsStaggered />
+      <div className="flex text-2xl text-white sm:hidden">
+        <Sheet>
+          <SheetTrigger> <FaBarsStaggered /> </SheetTrigger>
+          <SheetContent>
+            <SheetHeader>
+              <SheetTitle>Are you absolutely sure?</SheetTitle>
+              <SheetDescription>
+                This action cannot be undone. This will permanently delete your account
+                and remove your data from our servers.
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   </header>
