@@ -66,9 +66,6 @@ export default function Header() {
         <Link href="/mysql-crud">
           MySQL CRUD
         </Link>
-        <Link href="/mysql-prisma">
-          MySQL Prisma
-        </Link>
         <Link href="/sign-in">
           Sign In
         </Link>
