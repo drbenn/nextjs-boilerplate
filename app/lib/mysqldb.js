@@ -2,7 +2,72 @@
 
 import mysql from 'mysql2/promise';
 
-const executeQuery = async (query, data) => {
+// dbConfig = {
+//     host: 'localhost',
+//     port: '3306',
+//     user: 'root',  // Replace with your MySQL username
+//     password: 'pass',  // Replace with your MySQL password
+//     database: 'boilerplate',  // Replace with your database name
+//     waitForConnections: true,
+//     connectionLimit: 10,
+//     queueLimit: 0
+//   };
+
+export const getAllPosts = async () => {
+    try {
+        const db = await mysql.createConnection({
+            host: 'localhost',
+            port: '3306',
+            user: 'root',  // Replace with your MySQL username
+            password: 'pass',  // Replace with your MySQL password
+            database: 'boilerplate',  // Replace with your database name
+            waitForConnections: true,
+            connectionLimit: 10,
+            queueLimit: 0
+          });
+        const [result] = await db.execute("SELECT * FROM posts", []);
+        await db.end();
+        const normalizedResults = result.map(item => Object.assign({}, item));
+        console.log('norms');
+        console.log(normalizedResults);
+        return normalizedResults;
+    } catch (error) {
+        console.error(error);
+        return new Error(error);
+    };
+}
+
+export const createNewPost = async (post) => {
+    try {
+        const db = await mysql.createConnection({
+            host: 'localhost',
+            port: '3306',
+            user: 'root',  // Replace with your MySQL username
+            password: 'pass',  // Replace with your MySQL password
+            database: 'boilerplate',  // Replace with your database name
+            waitForConnections: true,
+            connectionLimit: 10,
+            queueLimit: 0
+          });
+        const [result] = await db.execute(
+            `INSERT INTO posts (post) 
+            VALUES ('${post}')`
+        , []);
+        await db.end();
+        // // if server status of 0,1, or 2, the insert was successful
+        // console.log(result.serverStatus);
+
+        return JSON.stringify({
+            status: 'post successful',
+            post: post
+        });
+    } catch (error) {
+        console.error(error);
+        return new Error(error);
+    };
+}   
+
+export const executeQuery = async (query, data) => {
     try {
         const db = await mysql.createConnection({
             host: 'localhost',
@@ -17,6 +82,8 @@ const executeQuery = async (query, data) => {
         const [result] = await db.execute(query, data);
         await db.end();
         const normalizedResults = result.map(item => Object.assign({}, item));
+        console.log('norms');
+        console.log(normalizedResults);
         return normalizedResults;
     } catch (error) {
         console.error(error);
@@ -24,4 +91,7 @@ const executeQuery = async (query, data) => {
     };
 };
 
-export default executeQuery;
+
+
+
+export default getAllPosts;
