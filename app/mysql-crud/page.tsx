@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 
 import PostsList from './components/posts-list';
 import PostForm from './components/post-form';
+import UpdateForm from './components/update-form';
 
 
 
@@ -27,7 +28,7 @@ export default async function MySqlCrud() {
     <main className="container">
         <div>MySqlCrud</div>
 
-        <section>
+        <section className='flex flex-col justify-center items-start h-screen'>
           {/* add click fuctionality for individual view */}
           {/* add delete functionality */}
           <h1>GET - Active Listing</h1>
@@ -56,7 +57,10 @@ export default async function MySqlCrud() {
         </section>
 
         <section>
-          <h1>Update - Create Post</h1>
+          <h1>Update Post</h1>
+          <div>
+            <UpdateForm />
+          </div>
         </section>
 
 

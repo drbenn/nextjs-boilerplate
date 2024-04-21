@@ -39,8 +39,11 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen bg-rose-100">
         
           <Header />
-          <main className="flex flex-grow bg-green-200 w-full">
-            {children}
+          <main className="flex flex-grow bg-zinc-100 w-full sm">
+            <div className="mx-auto w-full sm:w-11/12 md:w-7/12">
+              {children}
+
+            </div>
           </main>
           <Footer />
 
