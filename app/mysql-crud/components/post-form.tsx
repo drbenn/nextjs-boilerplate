@@ -11,11 +11,9 @@ export default function PostForm() {
     const handlePost = async (formData: FormData) => {
         "use server"
         const submitData = {
-            input1: formData.get("input1") as string,
-            // input2: formData.get("input2") as string,
+            postText: formData.get("postText") as string
         }
-        const response = await createNewPost(submitData.input1);    
-        console.log(response);
+        const response = await createNewPost(submitData.postText);    
 
         // rerenders route to update Posts and therefore Postslists
         revalidatePath("/mysql-crud");
@@ -23,26 +21,17 @@ export default function PostForm() {
   return (
     <>
         <form action={handlePost}>
-          <Input
-            name="input1"
-            type="text"
-            className="bg-white"
-            // value={post}
-            // onChange={(e) => setPost(e.target.value)}    
-            />
-            {/* <Input
-                name="input2"
+            <Input
+                name="postText"
                 type="text"
                 className="bg-white"
-                // value={post}
-                // onChange={(e) => setPost(e.target.value)}    
-            /> */}
-          <Button className="bg-zinc-900 hover:bg-zinc-600
-            transition text-white rounded py-2 px-3"
-            type="submit"
-            >
-            <IoBeerSharp className="mr-2 h-4 w-4" /> Insert New Post
-          </Button>
+            />
+            <Button className="bg-zinc-900 hover:bg-zinc-600
+                transition text-white rounded py-2 px-3"
+                type="submit"
+                >
+                <IoBeerSharp className="mr-2 h-4 w-4" /> Insert New Post
+            </Button>
         </form>
     </>
   )
