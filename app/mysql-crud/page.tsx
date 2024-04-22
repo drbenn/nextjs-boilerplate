@@ -1,43 +1,34 @@
 'use server'
 
-import { getAllPosts, createNewPost } from '../lib/mysqldb';
+import { getAllPosts } from '../lib/mysqldb';
+
 import { Button } from "@/components/ui/button"
 import { IoBeerSharp } from "react-icons/io5";
-
-
-import { Input } from "@/components/ui/input"
 
 import PostsList from './components/posts-list';
 import PostForm from './components/post-form';
 import UpdateForm from './components/update-form';
 
 
-
 export default async function MySqlCrud() {
     
   const result = await getAllPosts()
-  // console.log('yolo');
-
-
-  
-  
-  
-  
 
   return (
-    <main className="container">
-        <div>MySqlCrud</div>
+    <main className="container  cursor-default">
+        <h1 className='text-3xl font-bold pt-24 pb-16'>MySQL CRUD</h1>
 
-        <section className='flex flex-col justify-center items-start h-screen'>
-          {/* add click fuctionality for individual view */}
-          {/* add delete functionality */}
-          <h1>GET - Active Listing</h1>
-          <Button className="bg-zinc-900 hover:bg-zinc-600
-            transition text-white rounded py-2 px-3"
+        <section className='flex flex-col justify-start items-start'>
+          {/* TODO: add click fuctionality for individual view */}
+          <h2 className='text-xl font-semibold'>Posts</h2>
+          {/* <Button className="bg-zinc-900 hover:bg-zinc-600
+            transition text-white rounded py-2 px-3 my-4"
             >
             <IoBeerSharp className="mr-2 h-4 w-4" /> GET Posts
-          </Button>
+          </Button> */}
+
           <PostsList posts={result} />
+
           <div>
             
             {/* {JSON.stringify(result)} */}
@@ -50,14 +41,14 @@ export default async function MySqlCrud() {
         </section>
 
         <section>
-          <h1>Post - Create Post</h1>
+          <h2 className='text-xl font-semibold pt-16'>Create Post</h2>
           <div>
             <PostForm />
           </div>
         </section>
 
-        <section>
-          <h1>Update Post</h1>
+        <section className='pt-16 pb-32'>
+        <h2 className='text-xl font-semibold'>Update Post</h2>
           <div>
             <UpdateForm />
           </div>

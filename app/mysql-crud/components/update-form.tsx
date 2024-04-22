@@ -26,13 +26,13 @@ export default function UpdateForm() {
           <Input
             name="postId"
             type="text"
-            className="bg-white"
+            className="bg-white my-3"
             placeholder='Post ID'  
             />
             <Input
                 name="updatedPost"
                 type="text"
-                className="bg-white"
+                className="bg-white mb-3"
                 placeholder='Replacement Post'  
             />
           <Button className="bg-zinc-900 hover:bg-zinc-600

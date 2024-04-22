@@ -24,10 +24,10 @@ export default function PostForm() {
             <Input
                 name="postText"
                 type="text"
-                className="bg-white"
+                className="bg-white my-3"
             />
             <Button className="bg-zinc-900 hover:bg-zinc-600
-                transition text-white rounded py-2 px-3"
+                transition text-white rounded py-2 px-3 mb-3"
                 type="submit"
                 >
                 <IoBeerSharp className="mr-2 h-4 w-4" /> Insert New Post
