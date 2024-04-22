@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans } from "next/font/google";
 import "./globals.css";
-import { Providers } from './providers'
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -20,21 +19,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <html lang="en">
-    //   <body className={inter.className}>{children}</body>
-    // </html>
-
-    // <html lang="en" className={inter.className}>
-    //   <body className="flex flex-col min-h-screen bg-pink-100">
-    //     <Providers>
-    //       <Navbar />
-    //       <main className="flex-grow bg-pink-700">
-    //         {children}
-    //       </main>
-    //       <Footer />
-    //     </Providers>
-    //   </body>
-    // </html>
     <html lang="en" className={inter.className}>
       <body className="flex flex-col min-h-screen bg-rose-100">
         

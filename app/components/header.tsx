@@ -1,6 +1,5 @@
 // import Link from 'next/link';
 'use client'
-import { Link } from '@chakra-ui/next-js';
 import { FaBarsStaggered } from "react-icons/fa6";
 
 import {
@@ -12,6 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { DialogClose } from '@radix-ui/react-dialog';
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -31,14 +31,8 @@ export default function Header() {
           <Link href="/rss" className='text-white hover:text-zinc-300'>
             Rss
           </Link>
-          <Link href="/crud" className='text-white hover:text-zinc-300'>
-            CRUD
-          </Link>
           <Link href="/posts" className='text-white hover:text-zinc-300'>
             Posts
-          </Link>
-          <Link href="/shad" className='text-white hover:text-zinc-300'>
-            Shadcn
           </Link>
           <Link href="/mysql-crud" className='text-white hover:text-zinc-300'>
             MySQL CRUD
@@ -77,30 +71,12 @@ export default function Header() {
                     </Link>
                   </DialogClose>
                   <DialogClose asChild>
-                    <Link href="/crud" className='pl-5 py-1
-                    border-l-2 border-zinc-200 hover:border-zinc-600
-                    text-zinc-600 hover:text-zinc-900
-                    ease-in duration-75 transition-colors
-                    '>
-                      CRUD
-                    </Link>
-                  </DialogClose>
-                  <DialogClose asChild>
                     <Link href="/posts" className='pl-5 py-1
                     border-l-2 border-zinc-200 hover:border-zinc-600
                     text-zinc-600 hover:text-zinc-900
                     ease-in duration-75 transition-colors
                     '>
                       Posts
-                    </Link>
-                  </DialogClose>
-                  <DialogClose asChild>
-                    <Link href="/shad" className='pl-5 py-1
-                    border-l-2 border-zinc-200 hover:border-zinc-600
-                    text-zinc-600 hover:text-zinc-900
-                    ease-in duration-75 transition-colors
-                    '>
-                      Shadcn
                     </Link>
                   </DialogClose>
                   <DialogClose asChild>

@@ -28,8 +28,7 @@ export const getAllPosts = async () => {
         const [result] = await db.execute("SELECT * FROM posts", []);
         await db.end();
         const normalizedResults = result.map(item => Object.assign({}, item));
-        console.log('norms');
-        console.log(normalizedResults);
+        // console.log(normalizedResults);
         return normalizedResults;
     } catch (error) {
         console.error(error);
@@ -147,8 +146,7 @@ export const executeQuery = async (query, data) => {
         const [result] = await db.execute(query, data);
         await db.end();
         const normalizedResults = result.map(item => Object.assign({}, item));
-        console.log('norms');
-        console.log(normalizedResults);
+        // console.log(normalizedResults);
         return normalizedResults;
     } catch (error) {
         console.error(error);

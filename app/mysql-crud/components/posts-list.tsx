@@ -17,8 +17,10 @@ export default function PostsList({ posts }: { posts: any[] } ) {
       <ul>
         {posts.map((post:any) => (
           <li key={post.id} className="p-2 text-left">
-            <div className="w-full bg-fuchsia-100 flex flex-row justify-between gap-x-3 px-2
-            border rounded border border-zinc-900 border-solid
+            <div className="w-full flex flex-row justify-between gap-x-3 px-2
+            border rounded border border-solid border-zinc-500 hover:border-zinc-600
+            bg-orange-100 hover:bg-orange-200
+            ease-in duration-75 transition-colors
             ">
               <p className="flex-none font-semibold">{post.id}.</p>
               <p className="flex-grow">{post.post}</p>

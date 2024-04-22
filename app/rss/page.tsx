@@ -11,7 +11,7 @@ export default function Rss() {
         try {
           const rssFeed = await fetchRSSFeed('https://rss.nytimes.com/services/xml/rss/nyt/US.xml');
         //   setFeed(rssFeed);
-        console.log(rssFeed);
+        // console.log(rssFeed);
         
         } catch (error) {
           console.error('Error fetching RSS data:', error);
