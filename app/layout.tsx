@@ -3,6 +3,7 @@ import { Inter, Noto_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import SessionWrapper from "./components/session-wrapper";
 
 // Nextjs implementation of fonts
 const inter = Inter({ subsets: ["latin"] });
@@ -19,21 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="flex flex-col min-h-screen bg-rose-100">
-        
-          <Header />
-          <main className="flex flex-grow bg-zinc-100 w-full sm">
-            <div className="mx-auto w-full sm:w-11/12 md:w-7/12">
-              {children}
+    <SessionWrapper>
+      <html lang="en" className={inter.className}>
+        <body className="flex flex-col min-h-screen bg-rose-100">
+            <Header />
+            <main className="flex flex-grow bg-zinc-100 w-full sm">
+              <div className="mx-auto w-full sm:w-11/12 md:w-7/12">
+                {children}
 
-            </div>
-          </main>
-          <Footer />
-
-      </body>
-
-
-    </html>
+              </div>
+            </main>
+            <Footer />
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }

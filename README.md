@@ -13,6 +13,10 @@ https://www.youtube.com/watch?v=hpI-d39hUWY
 ## React concepts in 12 min
 https://www.youtube.com/watch?v=wIyHSOugGGw
 
+## NextAuth help
+https://www.youtube.com/watch?v=qDRQ2EaWsNM
+https://www.youtube.com/watch?v=Cm6-3pVCPEI
+
 ## Shipfa.st stack
 - Next.js obvi
 - Stripe - webhook & checkout

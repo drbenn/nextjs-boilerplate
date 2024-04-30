@@ -37,6 +37,9 @@ export default function Header() {
           <Link href="/mysql-crud" className='text-white hover:text-zinc-300'>
             MySQL CRUD
           </Link>
+          <Link href="/session" className='text-white hover:text-zinc-300'>
+            Session
+          </Link>
           <Link href="/sign-in" className='text-white hover:text-zinc-300'>
             Sign In
           </Link>
